@@ -1,0 +1,137 @@
+[tool.poetry]
+description = "Python tools for Interoperable Neuromorphometry Reporting"
+name = "pinr"
+version = "0.1.0"
+
+packages = [{include = "pinr"}]
+
+authors = ["CorticoMetrics <ltirrell@corticometrics.com>"]
+license = "MIT"
+
+documentation = "https://pinr.readthedocs.io"
+homepage = "https://pypi.org/project/pinr"
+readme = "README.md"
+repository = "https://github.com/ltirrell/pinr"
+
+classifiers = [
+  # TODO: update this list to match your application: https://pypi.org/pypi?%3Aaction=list_classifiers
+  "Development Status :: 1 - Planning",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+keywords = []
+
+[tool.poetry.dependencies]
+colormath = "^3.0.0"
+dicom2nifti = "^2.4.7"
+fhir-resources = {extras = ["all"], version = "^6.5.0"}
+highdicom = "^0.20.0"
+pandas = "^1.5.2"
+pydicom = "^2.3.1"
+python = "^3.8"
+surfa = {git = "https://github.com/freesurfer/surfa.git", rev = "master"}
+typer = {extras = ["all"], version = "^0.7.0"}
+
+[tool.poetry.group.dev.dependencies]
+# Formatters
+black = {extras = ["jupyter"], version = "^22.10.0"} 
+isort = {extras = ["colors"], version = "^5.10.1"} 
+tomli = "*" # missing 'black' dependency
+
+# Linters
+mypy = "~0.990"
+pydocstyle = "^6.1"
+pylint = "~2.15"
+
+# Testing
+freezegun = "*"
+pytest = "^7.2"
+pytest-cov = "^3.0"
+pytest-describe = "^2.0"
+pytest-expecter = "^3.0"
+pytest-random = "*"
+
+# Documentation
+mkdocs = "~1.3"
+pygments = "^2.11.1"
+
+# Tooling
+ipython = "^8.5.0"
+jupyter = "^1.0.0"
+jupyter-core = "^4.11.2"
+jupyterlab = "^3.4.8"
+matplotlib = "^3.6.3"
+
+# [tool.poetry.scripts]
+# Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
+# "pinr" = "pinr.__main__:app"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 88
+target-version = ["py310"]
+
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | env
+    | venv
+    | data
+)/
+'''
+quiet = true
+
+[tool.isort]
+# https://github.com/timothycrosley/isort/
+line_length = 88
+py_version = 310
+
+color_output = true
+include_trailing_comma = true
+indent = 4
+known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+multi_line_output = 3
+profile = "black"
+sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+skip_glob = "data"
+
+[tool.mypy]
+check_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+
+cache_dir = ".cache/mypy/"
+
+[tool.pytest.ini_options]
+addopts = """
+--strict-markers
+
+-r sxX
+--show-capture=log
+
+--cov-report=html
+--cov-report=term-missing:skip-covered
+--no-cov-on-fail
+"""
+norecursedirs = ["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+
+cache_dir = ".cache/pytest/"
+
+markers = []
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]

@@ -1,0 +1,446 @@
+# general details
+
+# Information about segmentations
+segment_attributes:
+  - label_id: 2
+    recommended_rgb_value:
+    - 245
+    - 245
+    - 245
+    segment_description: "Left-Cerebral-White-Matter"
+    segmented_property_type: "Cerebral White Matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 3
+    recommended_rgb_value:
+    - 205
+    - 62
+    - 78
+    segment_description: "Left-Cerebral-Cortex"
+    segmented_property_type: "Cerebral Gray Matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 4
+    recommended_rgb_value:
+    - 120
+    - 18
+    - 134
+    segment_description: "Left-Lateral-Ventricle"
+    segmented_property_type: "Brain ventricle"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 5
+    recommended_rgb_value:
+    - 196
+    - 58
+    - 250
+    segment_description: "Left-Inf-Lat-Vent"
+    segmented_property_type: "Inferior Horn of Lateral Ventricle"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 7
+    recommended_rgb_value:
+    - 220
+    - 248
+    - 164
+    segment_description: "Left-Cerebellum-White-Matter"
+    segmented_property_type: "Cerebellar white matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 8
+    recommended_rgb_value:
+    - 230
+    - 148
+    - 34
+    segment_description: "Left-Cerebellum-Cortex"
+    segmented_property_type: "Cerebellar Cortex"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 10
+    recommended_rgb_value:
+    - 0
+    - 118
+    - 14
+    segment_description: "Left-Thalamus"
+    segmented_property_type: "Thalamus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 11
+    recommended_rgb_value:
+    - 122
+    - 186
+    - 220
+    segment_description: "Left-Caudate"
+    segmented_property_type: "Caudate Nucleus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 12
+    recommended_rgb_value:
+    - 236
+    - 13
+    - 176
+    segment_description: "Left-Putamen"
+    segmented_property_type: "Putamen"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 13
+    recommended_rgb_value:
+    - 12
+    - 48
+    - 255
+    segment_description: "Left-Pallidum"
+    segmented_property_type: "Globus Pallidus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 14
+    recommended_rgb_value:
+    - 204
+    - 182
+    - 142
+    segment_description: "3rd-Ventricle"
+    segmented_property_type: "Third ventricle"
+    segmented_property_category: "Anatomical Structure"
+  - label_id: 15
+    recommended_rgb_value:
+    - 42
+    - 204
+    - 164
+    segment_description: "4th-Ventricle"
+    segmented_property_type: "Fourth Ventricle"
+    segmented_property_category: "Anatomical Structure"
+  - label_id: 16
+    recommended_rgb_value:
+    - 119
+    - 159
+    - 176
+    segment_description: "Brain-Stem"
+    segmented_property_type: "Brain Stem"
+    segmented_property_category: "Anatomical Structure"
+  - label_id: 17
+    recommended_rgb_value:
+    - 220
+    - 216
+    - 20
+    segment_description: "Left-Hippocampus"
+    segmented_property_type: "Hippocampus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 18
+    recommended_rgb_value:
+    - 103
+    - 255
+    - 255
+    segment_description: "Left-Amygdala"
+    segmented_property_type: "Amygdala"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 24
+    recommended_rgb_value:
+    - 60
+    - 60
+    - 60
+    segment_description: "CSF"
+    segmented_property_type: "Cerebrospinal Fluid"
+    segmented_property_category: "Body Substance"
+  - label_id: 26
+    recommended_rgb_value:
+    - 255
+    - 165
+    - 0
+    segment_description: "Left-Accumbens-area"
+    segmented_property_type: "Nucleus Accumbens"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 28
+    recommended_rgb_value:
+    - 165
+    - 42
+    - 42
+    segment_description: "Left-VentralDC"
+    segmented_property_type: "Ventral Diencephalon"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 30
+    recommended_rgb_value:
+    - 160
+    - 32
+    - 240
+    segment_description: "Left-vessel"
+    segmented_property_type: "Vascular structure of head"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 31
+    recommended_rgb_value:
+    - 0
+    - 200
+    - 200
+    segment_description: "Left-choroid-plexus"
+    segmented_property_type: "Structure of choroid plexus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 41
+    recommended_rgb_value:
+    - 245
+    - 245
+    - 245
+    segment_description: "Right-Cerebral-White-Matter"
+    segmented_property_type: "Cerebral White Matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 42
+    recommended_rgb_value:
+    - 205
+    - 62
+    - 78
+    segment_description: "Right-Cerebral-Cortex"
+    segmented_property_type: "Cerebral Gray Matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 43
+    recommended_rgb_value:
+    - 120
+    - 18
+    - 134
+    segment_description: "Right-Lateral-Ventricle"
+    segmented_property_type: "Brain ventricle"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 44
+    recommended_rgb_value:
+    - 196
+    - 58
+    - 250
+    segment_description: "Right-Inf-Lat-Vent"
+    segmented_property_type: "Inferior Horn of Lateral Ventricle"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 46
+    recommended_rgb_value:
+    - 220
+    - 248
+    - 164
+    segment_description: "Right-Cerebellum-White-Matter"
+    segmented_property_type: "Cerebellar white matter"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 47
+    recommended_rgb_value:
+    - 230
+    - 148
+    - 34
+    segment_description: "Right-Cerebellum-Cortex"
+    segmented_property_type: "Cerebellar Cortex"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 49
+    recommended_rgb_value:
+    - 0
+    - 118
+    - 14
+    segment_description: "Right-Thalamus"
+    segmented_property_type: "Thalamus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 50
+    recommended_rgb_value:
+    - 122
+    - 186
+    - 220
+    segment_description: "Right-Caudate"
+    segmented_property_type: "Caudate Nucleus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 51
+    recommended_rgb_value:
+    - 236
+    - 13
+    - 176
+    segment_description: "Right-Putamen"
+    segmented_property_type: "Putamen"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 52
+    recommended_rgb_value:
+    - 13
+    - 48
+    - 255
+    segment_description: "Right-Pallidum"
+    segmented_property_type: "Globus Pallidus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 53
+    recommended_rgb_value:
+    - 220
+    - 216
+    - 20
+    segment_description: "Right-Hippocampus"
+    segmented_property_type: "Hippocampus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 54
+    recommended_rgb_value:
+    - 103
+    - 255
+    - 255
+    segment_description: "Right-Amygdala"
+    segmented_property_type: "Amygdala"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 58
+    recommended_rgb_value:
+    - 255
+    - 165
+    - 0
+    segment_description: "Right-Accumbens-area"
+    segmented_property_type: "Nucleus Accumbens"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 60
+    recommended_rgb_value:
+    - 165
+    - 42
+    - 42
+    segment_description: "Right-VentralDC"
+    segmented_property_type: "Ventral Diencephalon"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 62
+    recommended_rgb_value:
+    - 160
+    - 32
+    - 240
+    segment_description: "Right-vessel"
+    segmented_property_type: "Vascular structure of head"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 63
+    recommended_rgb_value:
+    - 0
+    - 200
+    - 221
+    segment_description: "Right-choroid-plexus"
+    segmented_property_type: "Structure of choroid plexus"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 72
+    recommended_rgb_value:
+    - 120
+    - 190
+    - 150
+    segment_description: "5th-Ventricle"
+    segmented_property_type: "Fifth Ventricle"
+    segmented_property_category: "Anatomical Structure"
+  - label_id: 77
+    recommended_rgb_value:
+    - 200
+    - 70
+    - 255
+    segment_description: "WM-hypointensities"
+    segmented_property_type: "White Matter T1 Hypointensity"
+    segmented_property_category: "Morphologically Abnormal Structure"
+  - label_id: 78
+    recommended_rgb_value:
+    - 255
+    - 148
+    - 10
+    segment_description: "Left-WM-hypointensities"
+    segmented_property_type: "White Matter T1 Hypointensity"
+    segmented_property_category: "Morphologically Abnormal Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 79
+    recommended_rgb_value:
+    - 255
+    - 148
+    - 10
+    segment_description: "Right-WM-hypointensities"
+    segmented_property_type: "White Matter T1 Hypointensity"
+    segmented_property_category: "Morphologically Abnormal Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 80
+    recommended_rgb_value:
+    - 164
+    - 108
+    - 226
+    segment_description: "non-WM-hypointensities"
+    segmented_property_type: "Tissue"
+    segmented_property_category: "Morphologically Abnormal Structure"
+  - label_id: 81
+    recommended_rgb_value:
+    - 164
+    - 108
+    - 226
+    segment_description: "Left-non-WM-hypointensities"
+    segmented_property_type: "Tissue"
+    segmented_property_category: "Morphologically Abnormal Structure"
+    segmented_property_modifier: "Left"
+  - label_id: 82
+    recommended_rgb_value:
+    - 164
+    - 108
+    - 226
+    segment_description: "Right-non-WM-hypointensities"
+    segmented_property_type: "Tissue"
+    segmented_property_category: "Morphologically Abnormal Structure"
+    segmented_property_modifier: "Right"
+  - label_id: 85
+    recommended_rgb_value:
+    - 234
+    - 169
+    - 30
+    segment_description: "Optic-Chiasm"
+    segmented_property_type: "Optic chiasm"
+    segmented_property_category: "Anatomical Structure"
+  - label_id: 251
+    recommended_rgb_value:
+    - 0
+    - 0
+    - 64
+    segment_description: "CC_Posterior"
+    segmented_property_type: "Corpus Callosum"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Posterior"
+  - label_id: 252
+    recommended_rgb_value:
+    - 0
+    - 0
+    - 112
+    segment_description: "CC_Mid_Posterior"
+    segmented_property_type: "Corpus Callosum"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Posterior"
+  - label_id: 253
+    recommended_rgb_value:
+    - 0
+    - 0
+    - 160
+    segment_description: "CC_Central"
+    segmented_property_type: "Corpus Callosum"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Central"
+  - label_id: 254
+    recommended_rgb_value:
+    - 0
+    - 0
+    - 208
+    segment_description: "CC_Mid_Anterior"
+    segmented_property_type: "Corpus Callosum"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Anterior"
+  - label_id: 255
+    recommended_rgb_value:
+    - 0
+    - 0
+    - 255
+    segment_description: "CC_Anterior"
+    segmented_property_type: "Corpus Callosum"
+    segmented_property_category: "Anatomical Structure"
+    segmented_property_modifier: "Anterior"
+
+# seg specific details
+seg_series_number: 777
+seg_series_description: Segmentation
+seg_content_description: FreeSurfer ASeg DICOM Segmentation, created pinr
+
+# sr specific details
+sr_series_number: 888
+sr_series_description: Volumetric Measurements
