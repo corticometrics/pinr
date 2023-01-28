@@ -223,7 +223,7 @@ class FreeSurferSeg:
         with tempfile.TemporaryDirectory() as _temp_dir:
             t1w_nii = dicom2nifti.convert_dicom.dicom_array_to_nifti(
                 self.t1w_image_datasets,
-                Path(_temp_dir.name, "t1w.nii.gz"),
+                Path(_temp_dir, "t1w.nii.gz"),
                 reorient_nifti=False,
             )
             t1w_image = sf.load_volume(str(t1w_nii["NII_FILE"]))

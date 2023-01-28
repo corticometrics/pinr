@@ -67,9 +67,9 @@ jupyter-core = "^4.11.2"
 jupyterlab = "^3.4.8"
 matplotlib = "^3.6.3"
 
-# [tool.poetry.scripts]
+[tool.poetry.scripts]
 # Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
-# "pinr" = "pinr.__main__:app"
+"pinr" = "pinr.__main__:app"
 
 [tool.black]
 # https://github.com/psf/black

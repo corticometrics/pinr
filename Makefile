@@ -17,7 +17,12 @@ codestyle:
 	poetry run pylint pinr tests --rcfile=.pylint.ini --extension-pkg-whitelist='pydantic'
 	poetry run pydocstyle pinr tests
 
-#* Python sehll
+#* Python shell
 .PHONY: shell
 shell:
+	poetry run ipython
+
+#* Publish to PyPI
+.PHONY: publish
+publish:
 	poetry run ipython
