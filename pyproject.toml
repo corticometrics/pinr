@@ -1,7 +1,7 @@
 [tool.poetry]
 description = "Python tools for Interoperable Neuromorphometry Reporting"
 name = "pinr"
-version = "0.1.0"
+version = "0.1.1"
 
 packages = [{include = "pinr"}]
 
