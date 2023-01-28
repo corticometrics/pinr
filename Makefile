@@ -25,4 +25,4 @@ shell:
 #* Publish to PyPI
 .PHONY: publish
 publish:
-	poetry run ipython
+	poetry publish
