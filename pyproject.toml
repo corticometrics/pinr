@@ -34,8 +34,10 @@ highdicom = "^0.20.0"
 pandas = "^1.5.2"
 pydicom = "^2.3.1"
 python = "^3.8"
-surfa = {git = "https://github.com/freesurfer/surfa.git", rev = "master"}
+# surfa = {git = "https://github.com/freesurfer/surfa.git", rev = "master"}
 typer = {extras = ["all"], version = "^0.7.0"}
+nilearn = "^0.10.0"
+nibabel = "^5.0.0"
 
 [tool.poetry.group.dev.dependencies]
 # Formatters

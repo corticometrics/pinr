@@ -22,7 +22,13 @@ codestyle:
 shell:
 	poetry run ipython
 
+#* Build package
+.PHONY: build
+build:
+	poetry build
+
+
 #* Publish to PyPI
 .PHONY: publish
-publish:
+publish: build
 	poetry publish

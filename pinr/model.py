@@ -9,16 +9,18 @@ from pathlib import Path
 
 import dicom2nifti
 import highdicom as hd
+import nibabel as nb
 import numpy as np
 import pandas as pd
 import pkg_resources
 import pydicom
-import surfa as sf
 import yaml
 from colormath.color_conversions import convert_color
 from colormath.color_objects import LabColor, sRGBColor
 from fhir.resources import construct_fhir_element
 from highdicom.sr import content, templates
+from nilearn import image
+from nilearn.image import resample_to_img
 from pydicom.sr.codedict import codes
 from pydicom.uid import generate_uid
 
@@ -218,22 +220,29 @@ class FreeSurferSeg:
         return pydicom.dcmread(str(self.t1w_dicom_file))
 
     @cached_property
-    def resampled_aseg(self) -> sf.image.Volume:
-        aseg_image = sf.load_volume(str(self.aseg_file))
+    def resampled_aseg(self) -> nb.Nifti1Image:
+        aseg_image = image.load_img(str(self.aseg_file))
+        aseg_image = nb.Nifti1Image(
+            aseg_image.dataobj, aseg_image.affine, aseg_image.header
+        )
         with tempfile.TemporaryDirectory() as _temp_dir:
             t1w_nii = dicom2nifti.convert_dicom.dicom_array_to_nifti(
                 self.t1w_image_datasets,
                 Path(_temp_dir, "t1w.nii.gz"),
                 reorient_nifti=False,
             )
-            t1w_image = sf.load_volume(str(t1w_nii["NII_FILE"]))
-            resampled = aseg_image.resample_like(t1w_image, method="nearest")
+            t1w_image = image.load_img(str(t1w_nii["NII_FILE"]))
+            resampled = resample_to_img(aseg_image, t1w_image, interpolation="nearest")
 
             # use ordered_label_ids to change FS label numbers to sequential
             for x in self._ordered_seg_attrs:
                 label = x["label_id"]
                 ordered_label = x["ordered_label_id"]
-                resampled[resampled == label] = ordered_label
+                resampled_data = resampled.dataobj
+                resampled_data[resampled_data == label] = ordered_label
+                resampled = nb.Nifti1Image(
+                    resampled_data, resampled.affine, resampled.header
+                )
             return resampled
 
     @cached_property
@@ -290,7 +299,7 @@ class FreeSurferSeg:
             descriptions.append(d)
         seg = hd.seg.Segmentation(
             source_images=self.t1w_image_datasets,
-            pixel_array=np.swapaxes(self.resampled_aseg.data.astype("uint16"), 2, 0),
+            pixel_array=np.swapaxes(self.resampled_aseg.dataobj.astype("uint16"), 2, 0),
             segmentation_type=hd.seg.SegmentationTypeValues.BINARY,
             segment_descriptions=descriptions,
             series_instance_uid=generate_uid(CMET_ROOT_UID),
